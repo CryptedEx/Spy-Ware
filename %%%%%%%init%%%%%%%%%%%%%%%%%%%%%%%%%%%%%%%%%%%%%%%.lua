@@ -18,6 +18,16 @@ _G.Text8 = "Updated: Monday 4th July 2022, Time: 23:42" .. _G.SlashNText
 _G.Text9 = "Released: Nil" .. _G.SlashNText
 _G.Text10 = "Enjoy Spyware!" .. _G.SlashNText
 rconsoleprint('@@GREEN@@')
+rconsoleprint([[
+
+ ______     ______   __  __     __     __     ______     ______     ______    
+/\  ___\   /\  == \ /\ \_\ \   /\ \  _ \ \   /\  __ \   /\  == \   /\  ___\   
+\ \___  \  \ \  _-/ \ \____ \  \ \ \/ ".\ \  \ \  __ \  \ \  __<   \ \  __\   
+ \/\_____\  \ \_\    \/\_____\  \ \__/".~\_\  \ \_\ \_\  \ \_\ \_\  \ \_____\ 
+  \/_____/   \/_/     \/_____/   \/_/   \/_/   \/_/\/_/   \/_/ /_/   \/_____/ 
+                                                                              
+
+\n]])
 rconsoleprint(_G.Text)
 rconsoleprint(_G.Text2)
 rconsoleprint(_G.Text3)
@@ -30,6 +40,16 @@ rconsoleprint(_G.Text9)
 rconsoleprint(_G.Text10)
 rconsoleclear();
 rconsoleprint('@@BLACK@@')
+rconsoleprint([[
+
+ ______     ______   __  __     __     __     ______     ______     ______    
+/\  ___\   /\  == \ /\ \_\ \   /\ \  _ \ \   /\  __ \   /\  == \   /\  ___\   
+\ \___  \  \ \  _-/ \ \____ \  \ \ \/ ".\ \  \ \  __ \  \ \  __<   \ \  __\   
+ \/\_____\  \ \_\    \/\_____\  \ \__/".~\_\  \ \_\ \_\  \ \_\ \_\  \ \_____\ 
+  \/_____/   \/_/     \/_____/   \/_/   \/_/   \/_/\/_/   \/_/ /_/   \/_____/ 
+                                                                              
+
+\n]])
 rconsoleprint(_G.Text)
 rconsoleprint(_G.Text2)
 rconsoleprint(_G.Text3)
@@ -42,6 +62,16 @@ rconsoleprint(_G.Text9)
 rconsoleprint(_G.Text10)
 rconsoleclear();
 rconsoleprint('@@BLUE@@')
+rconsoleprint([[
+
+ ______     ______   __  __     __     __     ______     ______     ______    
+/\  ___\   /\  == \ /\ \_\ \   /\ \  _ \ \   /\  __ \   /\  == \   /\  ___\   
+\ \___  \  \ \  _-/ \ \____ \  \ \ \/ ".\ \  \ \  __ \  \ \  __<   \ \  __\   
+ \/\_____\  \ \_\    \/\_____\  \ \__/".~\_\  \ \_\ \_\  \ \_\ \_\  \ \_____\ 
+  \/_____/   \/_/     \/_____/   \/_/   \/_/   \/_/\/_/   \/_/ /_/   \/_____/ 
+                                                                              
+
+\n]])
 rconsoleprint(_G.Text)
 rconsoleprint(_G.Text2)
 rconsoleprint(_G.Text3)
@@ -54,6 +84,16 @@ rconsoleprint(_G.Text9)
 rconsoleprint(_G.Text10)
 rconsoleclear();
 rconsoleprint('@@CYAN@@')
+rconsoleprint([[
+
+ ______     ______   __  __     __     __     ______     ______     ______    
+/\  ___\   /\  == \ /\ \_\ \   /\ \  _ \ \   /\  __ \   /\  == \   /\  ___\   
+\ \___  \  \ \  _-/ \ \____ \  \ \ \/ ".\ \  \ \  __ \  \ \  __<   \ \  __\   
+ \/\_____\  \ \_\    \/\_____\  \ \__/".~\_\  \ \_\ \_\  \ \_\ \_\  \ \_____\ 
+  \/_____/   \/_/     \/_____/   \/_/   \/_/   \/_/\/_/   \/_/ /_/   \/_____/ 
+                                                                              
+
+\n]])
 rconsoleprint(_G.Text)
 rconsoleprint(_G.Text2)
 rconsoleprint(_G.Text3)
@@ -66,6 +106,16 @@ rconsoleprint(_G.Text9)
 rconsoleprint(_G.Text10)
 rconsoleclear();
 rconsoleprint('@@RED@@')
+rconsoleprint([[
+
+ ______     ______   __  __     __     __     ______     ______     ______    
+/\  ___\   /\  == \ /\ \_\ \   /\ \  _ \ \   /\  __ \   /\  == \   /\  ___\   
+\ \___  \  \ \  _-/ \ \____ \  \ \ \/ ".\ \  \ \  __ \  \ \  __<   \ \  __\   
+ \/\_____\  \ \_\    \/\_____\  \ \__/".~\_\  \ \_\ \_\  \ \_\ \_\  \ \_____\ 
+  \/_____/   \/_/     \/_____/   \/_/   \/_/   \/_/\/_/   \/_/ /_/   \/_____/ 
+                                                                              
+
+\n]])
 rconsoleprint(_G.Text)
 rconsoleprint(_G.Text2)
 rconsoleprint(_G.Text3)
@@ -78,6 +128,16 @@ rconsoleprint(_G.Text9)
 rconsoleprint(_G.Text10)
 rconsoleclear();
 rconsoleprint('@@MAGENTA@@')
+rconsoleprint([[
+
+ ______     ______   __  __     __     __     ______     ______     ______    
+/\  ___\   /\  == \ /\ \_\ \   /\ \  _ \ \   /\  __ \   /\  == \   /\  ___\   
+\ \___  \  \ \  _-/ \ \____ \  \ \ \/ ".\ \  \ \  __ \  \ \  __<   \ \  __\   
+ \/\_____\  \ \_\    \/\_____\  \ \__/".~\_\  \ \_\ \_\  \ \_\ \_\  \ \_____\ 
+  \/_____/   \/_/     \/_____/   \/_/   \/_/   \/_/\/_/   \/_/ /_/   \/_____/ 
+                                                                              
+
+\n]])
 rconsoleprint(_G.Text)
 rconsoleprint(_G.Text2)
 rconsoleprint(_G.Text3)
@@ -90,6 +150,16 @@ rconsoleprint(_G.Text9)
 rconsoleprint(_G.Text10)
 rconsoleclear();
 rconsoleprint('@@BROWN@@')
+rconsoleprint([[
+
+ ______     ______   __  __     __     __     ______     ______     ______    
+/\  ___\   /\  == \ /\ \_\ \   /\ \  _ \ \   /\  __ \   /\  == \   /\  ___\   
+\ \___  \  \ \  _-/ \ \____ \  \ \ \/ ".\ \  \ \  __ \  \ \  __<   \ \  __\   
+ \/\_____\  \ \_\    \/\_____\  \ \__/".~\_\  \ \_\ \_\  \ \_\ \_\  \ \_____\ 
+  \/_____/   \/_/     \/_____/   \/_/   \/_/   \/_/\/_/   \/_/ /_/   \/_____/ 
+                                                                              
+
+\n]])
 rconsoleprint(_G.Text)
 rconsoleprint(_G.Text2)
 rconsoleprint(_G.Text3)
@@ -102,6 +172,16 @@ rconsoleprint(_G.Text9)
 rconsoleprint(_G.Text10)
 rconsoleclear();
 rconsoleprint('@@LIGHT_GRAY@@')
+rconsoleprint([[
+
+ ______     ______   __  __     __     __     ______     ______     ______    
+/\  ___\   /\  == \ /\ \_\ \   /\ \  _ \ \   /\  __ \   /\  == \   /\  ___\   
+\ \___  \  \ \  _-/ \ \____ \  \ \ \/ ".\ \  \ \  __ \  \ \  __<   \ \  __\   
+ \/\_____\  \ \_\    \/\_____\  \ \__/".~\_\  \ \_\ \_\  \ \_\ \_\  \ \_____\ 
+  \/_____/   \/_/     \/_____/   \/_/   \/_/   \/_/\/_/   \/_/ /_/   \/_____/ 
+                                                                              
+
+\n]])
 rconsoleprint(_G.Text)
 rconsoleprint(_G.Text2)
 rconsoleprint(_G.Text3)
@@ -114,6 +194,16 @@ rconsoleprint(_G.Text9)
 rconsoleprint(_G.Text10)
 rconsoleclear();
 rconsoleprint('@@DARK_GRAY@@')
+rconsoleprint([[
+
+ ______     ______   __  __     __     __     ______     ______     ______    
+/\  ___\   /\  == \ /\ \_\ \   /\ \  _ \ \   /\  __ \   /\  == \   /\  ___\   
+\ \___  \  \ \  _-/ \ \____ \  \ \ \/ ".\ \  \ \  __ \  \ \  __<   \ \  __\   
+ \/\_____\  \ \_\    \/\_____\  \ \__/".~\_\  \ \_\ \_\  \ \_\ \_\  \ \_____\ 
+  \/_____/   \/_/     \/_____/   \/_/   \/_/   \/_/\/_/   \/_/ /_/   \/_____/ 
+                                                                              
+
+\n]])
 rconsoleprint(_G.Text)
 rconsoleprint(_G.Text2)
 rconsoleprint(_G.Text3)
@@ -126,6 +216,16 @@ rconsoleprint(_G.Text9)
 rconsoleprint(_G.Text10)
 rconsoleclear();
 rconsoleprint('@@LIGHT_BLUE@@')
+rconsoleprint([[
+
+ ______     ______   __  __     __     __     ______     ______     ______    
+/\  ___\   /\  == \ /\ \_\ \   /\ \  _ \ \   /\  __ \   /\  == \   /\  ___\   
+\ \___  \  \ \  _-/ \ \____ \  \ \ \/ ".\ \  \ \  __ \  \ \  __<   \ \  __\   
+ \/\_____\  \ \_\    \/\_____\  \ \__/".~\_\  \ \_\ \_\  \ \_\ \_\  \ \_____\ 
+  \/_____/   \/_/     \/_____/   \/_/   \/_/   \/_/\/_/   \/_/ /_/   \/_____/ 
+                                                                              
+
+\n]])
 rconsoleprint(_G.Text)
 rconsoleprint(_G.Text2)
 rconsoleprint(_G.Text3)
@@ -138,6 +238,16 @@ rconsoleprint(_G.Text9)
 rconsoleprint(_G.Text10)
 rconsoleclear();
 rconsoleprint('@@LIGHT_GREEN@@')
+rconsoleprint([[
+
+ ______     ______   __  __     __     __     ______     ______     ______    
+/\  ___\   /\  == \ /\ \_\ \   /\ \  _ \ \   /\  __ \   /\  == \   /\  ___\   
+\ \___  \  \ \  _-/ \ \____ \  \ \ \/ ".\ \  \ \  __ \  \ \  __<   \ \  __\   
+ \/\_____\  \ \_\    \/\_____\  \ \__/".~\_\  \ \_\ \_\  \ \_\ \_\  \ \_____\ 
+  \/_____/   \/_/     \/_____/   \/_/   \/_/   \/_/\/_/   \/_/ /_/   \/_____/ 
+                                                                              
+
+\n]])
 rconsoleprint(_G.Text)
 rconsoleprint(_G.Text2)
 rconsoleprint(_G.Text3)
@@ -150,6 +260,16 @@ rconsoleprint(_G.Text9)
 rconsoleprint(_G.Text10)
 rconsoleclear();
 rconsoleprint('@@LIGHT_RED@@')
+rconsoleprint([[
+
+ ______     ______   __  __     __     __     ______     ______     ______    
+/\  ___\   /\  == \ /\ \_\ \   /\ \  _ \ \   /\  __ \   /\  == \   /\  ___\   
+\ \___  \  \ \  _-/ \ \____ \  \ \ \/ ".\ \  \ \  __ \  \ \  __<   \ \  __\   
+ \/\_____\  \ \_\    \/\_____\  \ \__/".~\_\  \ \_\ \_\  \ \_\ \_\  \ \_____\ 
+  \/_____/   \/_/     \/_____/   \/_/   \/_/   \/_/\/_/   \/_/ /_/   \/_____/ 
+                                                                              
+
+\n]])
 rconsoleprint(_G.Text)
 rconsoleprint(_G.Text2)
 rconsoleprint(_G.Text3)
@@ -162,6 +282,16 @@ rconsoleprint(_G.Text9)
 rconsoleprint(_G.Text10)
 rconsoleclear();
 rconsoleprint('@@LIGHT_MAGENTA@@')
+rconsoleprint([[
+
+ ______     ______   __  __     __     __     ______     ______     ______    
+/\  ___\   /\  == \ /\ \_\ \   /\ \  _ \ \   /\  __ \   /\  == \   /\  ___\   
+\ \___  \  \ \  _-/ \ \____ \  \ \ \/ ".\ \  \ \  __ \  \ \  __<   \ \  __\   
+ \/\_____\  \ \_\    \/\_____\  \ \__/".~\_\  \ \_\ \_\  \ \_\ \_\  \ \_____\ 
+  \/_____/   \/_/     \/_____/   \/_/   \/_/   \/_/\/_/   \/_/ /_/   \/_____/ 
+                                                                              
+
+\n]])
 rconsoleprint(_G.Text)
 rconsoleprint(_G.Text2)
 rconsoleprint(_G.Text3)
@@ -174,6 +304,16 @@ rconsoleprint(_G.Text9)
 rconsoleprint(_G.Text10)
 rconsoleclear();
 rconsoleprint('@@YELLOW@@')
+rconsoleprint([[
+
+ ______     ______   __  __     __     __     ______     ______     ______    
+/\  ___\   /\  == \ /\ \_\ \   /\ \  _ \ \   /\  __ \   /\  == \   /\  ___\   
+\ \___  \  \ \  _-/ \ \____ \  \ \ \/ ".\ \  \ \  __ \  \ \  __<   \ \  __\   
+ \/\_____\  \ \_\    \/\_____\  \ \__/".~\_\  \ \_\ \_\  \ \_\ \_\  \ \_____\ 
+  \/_____/   \/_/     \/_____/   \/_/   \/_/   \/_/\/_/   \/_/ /_/   \/_____/ 
+                                                                              
+
+\n]])
 rconsoleprint(_G.Text)
 rconsoleprint(_G.Text2)
 rconsoleprint(_G.Text3)
@@ -186,6 +326,16 @@ rconsoleprint(_G.Text9)
 rconsoleprint(_G.Text10)
 rconsoleclear();
 rconsoleprint('@@WHITE@@')
+rconsoleprint([[
+
+ ______     ______   __  __     __     __     ______     ______     ______    
+/\  ___\   /\  == \ /\ \_\ \   /\ \  _ \ \   /\  __ \   /\  == \   /\  ___\   
+\ \___  \  \ \  _-/ \ \____ \  \ \ \/ ".\ \  \ \  __ \  \ \  __<   \ \  __\   
+ \/\_____\  \ \_\    \/\_____\  \ \__/".~\_\  \ \_\ \_\  \ \_\ \_\  \ \_____\ 
+  \/_____/   \/_/     \/_____/   \/_/   \/_/   \/_/\/_/   \/_/ /_/   \/_____/ 
+                                                                              
+
+\n]])
 rconsoleprint(_G.Text)
 rconsoleprint(_G.Text2)
 rconsoleprint(_G.Text3)
@@ -198,6 +348,16 @@ rconsoleprint(_G.Text9)
 rconsoleprint(_G.Text10)
 rconsoleclear();
 rconsoleprint('@@GREEN@@')
+rconsoleprint([[
+
+ ______     ______   __  __     __     __     ______     ______     ______    
+/\  ___\   /\  == \ /\ \_\ \   /\ \  _ \ \   /\  __ \   /\  == \   /\  ___\   
+\ \___  \  \ \  _-/ \ \____ \  \ \ \/ ".\ \  \ \  __ \  \ \  __<   \ \  __\   
+ \/\_____\  \ \_\    \/\_____\  \ \__/".~\_\  \ \_\ \_\  \ \_\ \_\  \ \_____\ 
+  \/_____/   \/_/     \/_____/   \/_/   \/_/   \/_/\/_/   \/_/ /_/   \/_____/ 
+                                                                              
+
+\n]])
 rconsoleprint(_G.Text)
 rconsoleprint(_G.Text2)
 rconsoleprint(_G.Text3)
