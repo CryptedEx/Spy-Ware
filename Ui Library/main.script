@@ -165,7 +165,7 @@ TextLabel_2.BorderSizePixel = 0
 TextLabel_2.Position = UDim2.new(0.0161290318, 0, 0.168307245, 0)
 TextLabel_2.Size = UDim2.new(0, 230, 0, 18)
 TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "(c) 2021 CypherBrew Corp. All rights reserved"
+TextLabel_2.Text = "(c) 2021 Spy-Ware Corp. All rights reserved"
 TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.TextSize = 15.000
 
@@ -200,7 +200,7 @@ loadinglabel2.BorderSizePixel = 0
 loadinglabel2.Position = UDim2.new(0.0637976825, 0, 0.0553691387, 0)
 loadinglabel2.Size = UDim2.new(0, 164, 0, 27)
 loadinglabel2.Font = Enum.Font.SourceSans
-loadinglabel2.Text = "CypherBrew Command Prompt"
+loadinglabel2.Text = "Spy-Ware Command Prompt"
 loadinglabel2.TextColor3 = Color3.fromRGB(255, 255, 255)
 loadinglabel2.TextSize = 15.000
 
