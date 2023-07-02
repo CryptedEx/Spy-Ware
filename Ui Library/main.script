@@ -97,7 +97,7 @@ loadinglabel2.TextSize = 15.000
 --// Scripts:
 loadinglabel2.Text = "Loaded!"
 wait(0.4)
-loadinglabel2.Text = "Founder SploitGodZ"
+loadinglabel2.Text = "Founder Cryptex aka SploitGodZ"
 wait(0.4)
 loadinglabel2.Text = "Spy-Ware Command Prompt"
 wait(0.4)
@@ -212,7 +212,7 @@ InputBox.BorderSizePixel = 0
 InputBox.Position = UDim2.new(0.175221235, 0, 0.318791956, 0)
 InputBox.Size = UDim2.new(0, 466, 0, 15)
 InputBox.Font = Enum.Font.SourceSans
-InputBox.Text = InputBox.Text
+InputBox.Text = "Input Here"
 InputBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 InputBox.TextSize = 14.000
 InputBox.TextXAlignment = Enum.TextXAlignment.Left
