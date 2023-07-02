@@ -1,305 +1,96 @@
-local lib = {}
+-- Instances:
 
-getgenv().ReloadScript = true
-wait(.1) 
-getgenv().ReloadScript = false
+local CypherBrewLoadingScreen = Instance.new("ScreenGui")
+local CypherLoadingMain = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local Frame = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local loadinglabel2 = Instance.new("TextLabel")
+local InputBox = Instance.new("TextBox")
 
-lib.new = function(name)
-    local uiname = name or "Console Lib"
-    local func = {}
-    local CurrentPage = ""
-    local Layers = {}
-    local Value = setmetatable({},{
-        __index = function(a,b)
-            a[b] = {}
-            return a[b]
-        end
-    })
+--Properties:
 
-    local cs = {
-        iprint = printconsole, -- internal ui print
-        clear = rconsoleclear,
-        setname = rconsolename,
-        error = rconsoleerr,
-        warn = rconsolewarn,
-        info = rconsoleinfo,
-        input = rconsoleinput,
-        print = function(text,color)
-            if not color then color = "WHITE" end
-            local Color = ("@@%s@@"):format(color:upper():gsub(" ","_"))
-            rconsoleprint(Color)
-            rconsoleprint(text.."\n")
-            rconsoleprint("@@WHITE@@")
-        end,
-        line = function(text,color)
-            if not color then color = "WHITE" end
-            local Color = ("@@%s@@"):format(color:upper():gsub(" ","_"))
-            rconsoleprint(Color)
-            rconsoleprint(text)
-            rconsoleprint("@@WHITE@@")
-        end,
-    }
-    
-    function reload(page)
-        if Layers[page] then
-            cs.clear()
-            cs.setname(uiname.. " : ".. page)
-            for i=1,#Layers[page] do v = Layers[page][i]
-                v.loadfunc()
-            end
-        end
-    end
-    
-    cs.setname(uiname)
-    cs.clear()
-    
-    func.Page = function(Name)
-        local page_func = {}
-        Layers[Name] = {}
-        page_func.show = function()
-            reload(Name)
-        end
-        
-        page_func.call = function(name,callback)
-            Value.call[name] = {
-                Callback = callback or function() end
-            }
-            
-            function load()
-                cs.line("[","Light Red")
-                cs.line("-",green)
-                cs.line("] ","Light Red")
-                cs.line(name,"cyan")
-                cs.print(" <call "..name..">")
-            end
-            load()
-            table.insert(Layers[Name],{
-                Name = name,
-                loadfunc = load,
-                value = Value.call[name].Value,
-                callback = callback,
-            })
-        end
-        
-        page_func.toggle = function(name,default,callback)
-            Value.toggle[name] = {
-                Value = default,
-                Callback = callback or function() end
-            }
-            
-            function load()
-                local color = {
-                    ["true"] = "green",
-                    ["false"] = "red"
-                }
-                cs.line("[","Light Red")
-                cs.line("*",color[tostring(Value.toggle[name].Value)])
-                cs.line("] ","Light Red")
-                cs.line(name,"cyan")
-                cs.print((" <toggle %s {true/1,false/0}>"):format(name))
-            end
-            load()
-            table.insert(Layers[Name],{
-                Name = name,
-                loadfunc = load,
-                value = Value.toggle[name].Value,
-                callback = callback
-            })
-        end
+CypherBrewLoadingScreen.Name = "CypherBrew Loading Screen"
+CypherBrewLoadingScreen.Parent = game.CoreGui
+CypherBrewLoadingScreen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-        page_func.int = function(name,min,max,default,callback)
-            Value.int[name] = {
-                Value = default,
-                max = max,
-                min = min,
-                Callback = callback or function() end
-            }
-            
-            function load()
-                local color = {}
-                color[max] = "red"
-                color[min] = "green"
-                
-                cs.line("[","Light Red")
-                cs.line(Value.int[name].Value,color[tostring(Value.int[name].Value)])
-                cs.line("] ","Light Red")
-                cs.line(name,"cyan")
-                cs.print((" <int %s {number between %s}>"):format(name,min.."-"..max))
-            end
-            load()
-            table.insert(Layers[Name],{
-                Name = name,
-                loadfunc = load,
-                value = Value.int[name].Value,
-                max = max,
-                min = min,
-                callback = callback
-            })
-        end
-    
-        page_func.str = function(name,default,callback)
-            Value.str[name] = {
-                Value = default,
-                max = max,
-                min = min,
-                Callback = callback or function() end
-            }
-            
-            function load()
-                
-                cs.line("[","Light Red")
-                cs.line(Value.str[name].Value)
-                cs.line("] ","Light Red")
-                cs.line(name,"cyan")
-                cs.print((" <str %s {string/text}>"):format(name))
-            end
-            load()
-            table.insert(Layers[Name],{
-                Name = name,
-                loadfunc = load,
-                value = Value.str[name].Value,
-                callback = callback
-            })
-        end
-    
-        page_func.list = function(name,list,default,callback)
-            Value.list[name] = {
-                Value = default,
-                AllList = list,
-                Callback = callback or function() end
-            }
-            
-            function load()
-                cs.line("[","Light Red")
-                cs.line(Value.list[name].Value)
-                cs.line("] ","Light Red")
-                cs.line(name,"cyan")
-                local allist = ""
-                for i,v in pairs(list) do
-                    allist = allist..v
-                    if i ~= #list then
-                        allist = allist..", "
-                    end
-                end
-                cs.print((" <list %s {%s}>"):format(name,allist ))
-            end
-            load()
-            table.insert(Layers[Name],{
-                Name = name,
-                loadfunc = load,
-                value = Value.list[name].Value,
-                list = list,
-                callback = callback
-            })
-        end
-    
-        return page_func
-    end
-    task.spawn(function()
-        while wait() do if getgenv().ReloadScript == true then cs.clear() break end -- break the loop when re-exe
-            cs.print("")
-            local Input = cs.input()
-            local splited = Input:split(" ")
-            local cmd = splited[1]
-            table.remove(splited,1)
-            local args = splited
-            cs.clear()
-            
-            if cmd == "toggle" and args[1] and args[2] then -- check cmd
-                -- format Value
-                
-                if args[2] == "true" or args[2] == "1" then
-                    args[2] = true
-                elseif args[2] == "false" or args[2] == "0" then
-                    args[2] = false
-                end
-            
-                -- callback and check is cmd write correctly
-                local data = Value.toggle[args[1]]
-                if  data and type(data.Value) == type(args[2]) then
-                    data.Value = args[2]
-                    data.Callback(args[2])
-                else
-                    cs.error("toggle {name} {value to set}")
-                end
-            end
+CypherLoadingMain.Name = "CypherLoadingMain"
+CypherLoadingMain.Parent = CypherBrewLoadingScreen
+CypherLoadingMain.Active = true
+CypherLoadingMain.BackgroundColor3 = Color3.fromRGB(3, 3, 3)
+CypherLoadingMain.BorderSizePixel = 0
+CypherLoadingMain.Position = UDim2.new(0.234614849, 0, 0.332535207, 0)
+CypherLoadingMain.Size = UDim2.new(0, 565, 0, 298)
+CypherLoadingMain.Draggable = true;
+TextLabel.Parent = CypherLoadingMain
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0161290318, 0, 0.106375843, 0)
+TextLabel.Size = UDim2.new(0, 164, 0, 19)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Command Prompt [Version 4.0]"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 15.000
 
-            if cmd == "str" and args[1] and args[2] then -- check cmd
+TextLabel_2.Parent = CypherLoadingMain
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.0161290318, 0, 0.168307245, 0)
+TextLabel_2.Size = UDim2.new(0, 230, 0, 18)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "(c) 2021 CypherBrew Corp. All rights reserved"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 15.000
 
-                -- callback and check is cmd write correctly
-                local data = Value.str[args[1]]
-                if  data then
-                    data.Value = args[2]
-                    data.Callback(args[2])
-                else
-                    cs.error("str {name} {value to set}")
-                end
-            end
-            
-            if cmd == "int" and args[1] and args[2] then -- check cmd
-                -- format Value
-                if args[2] == "true" then
-                    args[2] = 1
-                elseif args[2] == "false" then
-                    args[2] = 0
-                end
-                if type(args[2]) == "string" then args[2] = tonumber(args[2]) end
-                
-                -- callback and check is cmd write correctly
-                local data = Value.int[args[1]]
-                if  data and type(data.Value) == type(args[2]) then
-                    args[2] = math.clamp(args[2],data.min,data.max)
-                    data.Value = args[2]
-                    data.Callback(args[2])
-                else
-                    cs.error("int {name} {value to set}")
-                end
-            end
-            
-            if cmd == "list" and args[1] and args[2] then -- check cmd
-                -- callback and check is cmd write correctly
-                local data = Value.list[args[1]]
-                if data and table.find(data.AllList,args[2]) then
-                    data.Value = args[2]
-                    data.Callback(args[2])
-                else
-                    cs.error("list {name} {value to set}")
-                end
-            end
-        
-            if cmd == "show" and args[1] then
-                if args[1] == "page" then
-                    if args[2] and Layers[args[2]] and #Layers[args[2]] > 0 then
-                        CurrentPage = args[2]
-                        reload(CurrentPage)
-                    else
-                        for i,v in pairs(Layers) do
-                            if i ~= nil then
-                                cs.line(i..", ")
-                                cs.print("")
-                            end
-                        end
-                        input.cs()
-                    end
-                end
-                if args[1] == "help" then
-                    cs.info("toggle {name} {true/false , 1/0} --Change toggle value")
-                    cs.info("str {name} {string/text} --Change String Value")
-                    cs.info("int {name} {number between max and min} --Change number value")
-                    cs.info("list {name} {select list} --Change list value")
-                    cs.info("show {func}")
-                    cs.info("   help --show this command")
-                    cs.info("   page {page/blank} --Change page or show all pages")
-                end
-            end
-            
-            if cmd == "call" and args[1] then
-                Value.call[args[1]].Callback()
-            end
-            reload(CurrentPage)
-        end
-    end)
-    
-    return func
-end
-return lib
+TextLabel_3.Parent = CypherLoadingMain
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0, 0, 0.321551085, 0)
+TextLabel_3.Size = UDim2.new(0, 99, 0, 15)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "C:\\Users\\Admin>"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 15.000
+
+Frame.Parent = CypherLoadingMain
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Size = UDim2.new(0, 565, 0, 32)
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Position = UDim2.new(0, 0, -0.0153104067, 0)
+ImageLabel.Size = UDim2.new(0, 29, 0, 27)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=5040009517"
+
+loadinglabel2.Name = "loading label2"
+loadinglabel2.Parent = Frame
+loadinglabel2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+loadinglabel2.BackgroundTransparency = 1.000
+loadinglabel2.BorderSizePixel = 0
+loadinglabel2.Position = UDim2.new(0.0637976825, 0, 0.0553691387, 0)
+loadinglabel2.Size = UDim2.new(0, 164, 0, 27)
+loadinglabel2.Font = Enum.Font.SourceSans
+loadinglabel2.Text = "CypherBrew Command Prompt"
+loadinglabel2.TextColor3 = Color3.fromRGB(255, 255, 255)
+loadinglabel2.TextSize = 15.000
+
+InputBox.Parent = CypherLoadingMain
+InputBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+InputBox.BackgroundTransparency = 1.000
+InputBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+InputBox.BorderSizePixel = 0
+InputBox.Position = UDim2.new(0.175221235, 0, 0.318791956, 0)
+InputBox.Size = UDim2.new(0, 466, 0, 15)
+InputBox.Font = Enum.Font.SourceSans
+InputBox.Text = InputBox.Text
+InputBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+InputBox.TextSize = 14.000
+InputBox.TextXAlignment = Enum.TextXAlignment.Left
+InputBox.TextYAlignment = Enum.TextYAlignment.Bottom
